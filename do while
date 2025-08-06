@@ -1,0 +1,36 @@
+PROGRAM:
+
+import java.util.Scanner;
+
+public class OddEvenDoWhile {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        char choice;
+
+        do {
+            System.out.print("Enter a number: ");
+            int number = input.nextInt();
+
+            if (number % 2 == 0) {
+                System.out.println(number + " is Even.");
+            } else {
+                System.out.println(number + " is Odd.");
+            }
+
+            System.out.print("Do you want to try again? (y/n): ");
+            choice = input.next().charAt(0);
+
+        } while (choice == 'y' || choice == 'Y');
+
+        System.out.println("Program ended.");
+    }
+}
+OUTPUT:
+Enter a number: 3
+3 is Odd.
+Do you want to try again? (y/n): y
+Enter a number: 4
+4 is Even.
+Do you want to try again? (y/n):
+
+    
