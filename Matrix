@@ -1,0 +1,28 @@
+PROGRAM:
+
+public class Matrix2x3 {
+    public static void main(String[] args) {
+        int i = 2;
+        int j = 3;
+        int[][] matrix = new int[i][j];
+
+        for (int row = 0; row < i; row++) {
+            for (int col = 0; col < j; col++) {
+                matrix[row][col] = (row + 1) * (col + 1);
+            }
+        }
+
+      
+        System.out.println("Matrix (" + i + "x" + j + "):");
+        for (int row = 0; row < i; row++) {
+            for (int col = 0; col < j; col++) {
+                System.out.print(matrix[row][col] + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
+OUTPUT:
+Matrix (2x3):
+1	2	3
+2	4	
