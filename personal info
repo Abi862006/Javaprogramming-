@@ -1,0 +1,59 @@
+PROGRAM:
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = input.nextLine();
+        System.out.print("Enter your age (byte): ");
+        byte age = input.nextByte();
+        System.out.print("Enter your year of birth (short): ");
+        short yearOfBirth = input.nextShort();
+        System.out.print("Enter your pincode (int): ");
+        int pincode = input.nextInt();
+        System.out.print("Enter your phone number (long): ");
+        long phoneNumber = input.nextLong();
+        System.out.print("Enter your height in meters (float): ");
+        float height = input.nextFloat();
+        System.out.print("Enter your weight in kg (double): ");
+        double weight = input.nextDouble();
+        System.out.print("Enter your gender (M/F): ");
+        char gender = input.next().charAt(0);
+        System.out.print("Are you a student? (true/false): ");
+        boolean isStudent = input.nextBoolean();
+        System.out.println("\n--- Personal Information ---");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Year of Birth: " + yearOfBirth)          
+        System.out.println("Pincode: " + pincode);
+        System.out.println("Phone Number: " + phoneNumber);
+        System.out.println("Height: " + height + " meters");
+        System.out.println("Weight: " + weight + " kg");
+        System.out.println("Gender: " + gender);
+        System.out.println("Student: " + isStudent);
+        input.close();
+   }
+}
+OUTPUT:
+Enter your name: alamelu
+Enter your age (byte): 19
+Enter your year of birth (short): 2006
+Enter your pincode (int): 622507
+Enter your phone number (long): 1234567890
+Enter your height in meters (float): 164
+Enter your weight in kg (double): 52
+Enter your gender (M/F): F
+Are you a student? (true/false): true
+
+--- Personal Information ---
+Name: alamelu
+Age: 19
+Year of Birth: 2006
+Pincode: 622507
+Phone Number: 1234567890
+Height: 164.0 meters
+Weight: 52.0 kg
+Gender: F
+Student: true
+
+
