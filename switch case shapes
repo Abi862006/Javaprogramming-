@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+public class ShapeAreaCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Choose shape to calculate area:");
+        System.out.println("1. Circle");
+        System.out.println("2. Square");
+        System.out.println("3. Rectangle");
+        System.out.println("4. Triangle");
+
+        System.out.print("Enter your choice (1-4): ");
+        int choice = input.nextInt();
+
+        switch (choice) {
+            case 1:
+                // Circle area: π * r * r
+                System.out.print("Enter radius of the circle: ");
+                double radius = input.nextDouble();
+                double circleArea = Math.PI * radius * radius;
+                System.out.println("Area of Circle = " + circleArea);
+                break;
+
+            case 2:
+                // Square area: side * side
+                System.out.print("Enter side of the square: ");
+                double side = input.nextDouble();
+                double squareArea = side * side;
+                System.out.println("Area of Square = " + squareArea);
+                break;
+
+            case 3:
+                // Rectangle area: length * width
+                System.out.print("Enter length of the rectangle: ");
+                double length = input.nextDouble();
+                System.out.print("Enter width of the rectangle: ");
+                double width = input.nextDouble();
+                double rectangleArea = length * width;
+                System.out.println("Area of Rectangle = " + rectangleArea);
+                break;
+
+            case 4:
+                // Triangle area: (1/2) * base * height
+                System.out.print("Enter base of the triangle: ");
+                double base = input.nextDouble();
+                System.out.print("Enter height of the triangle: ");
+                double height = input.nextDouble();
+                double triangleArea = 0.5 * base * height;
+                System.out.println("Area of Triangle = " + triangleArea);
+                break;
+
+            default:
+                System.out.println("Invalid choice! Please select 1 to 4.");
+        }
+
+        input.close();
+    }
+}
+output:
+Choose shape to calculate area:
+1. Circle
+2. Square
+3. Rectangle
+4. Triangle
+Enter your choice (1-4): 2
+Enter side of the square: 4
+Area of Square = 16.0
+Choose shape to calculate area:
+1. Circle
+2. Square
+3. Rectangle
+4. Triangle
+Enter your choice (1-4): 4
+Enter base of the triangle: 3
+Enter height of the triangle: 4
+Area of Triangle = 6.0
