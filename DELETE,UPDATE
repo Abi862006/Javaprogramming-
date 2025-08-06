@@ -1,0 +1,90 @@
+import java.util.Scanner;
+
+public class ArrayUpdateDelete {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+       
+        System.out.print("Enter the number of names: ");
+        int size = input.nextInt();
+        input.nextLine();
+
+        String[] names = new String[size];
+
+
+        for (int i = 0; i < size; i++) {
+            System.out.print("Enter name " + (i + 1) + ": ");
+            names[i] = input.nextLine();
+        }
+
+
+        System.out.println("\nOriginal names:");
+        for (int i = 0; i < size; i++) {
+            System.out.println((i + 1) + ". " + names[i]);
+        }
+
+        // Step 3: Update one element
+        System.out.print("\nEnter position (1 to " + size + ") to update: ");
+        int updatePos = input.nextInt();
+        input.nextLine(); // Consume newline
+
+        if (updatePos >= 1 && updatePos <= size) {
+            System.out.print("Enter new name: ");
+            names[updatePos - 1] = input.nextLine();
+        } else {
+            System.out.println("Invalid position for update.");
+        }
+
+       
+        System.out.println("\nNames after update:");
+        for (int i = 0; i < size; i++) {
+            System.out.println((i + 1) + ". " + names[i]);
+        }
+
+        
+        System.out.print("\nEnter position (1 to " + size + ") to delete: ");
+        int deletePos = input.nextInt();
+
+        if (deletePos >= 1 && deletePos <= size) {
+            for (int i = deletePos - 1; i < size - 1; i++) {
+                names[i] = names[i + 1]; // Shift left
+            }
+            size--; 
+        } else {
+            System.out.println("Invalid position for delete.");
+        }
+
+       
+        System.out.println("\nNames after delete:");
+        for (int i = 0; i < size; i++) {
+            System.out.println((i + 1) + ". " + names[i]);
+        }
+
+        input.close();
+    }
+OUTPUT:
+Enter the number of names: 3
+Enter name 1: abi
+Enter name 2: aishu
+Enter name 3: jey
+
+Original names:
+1. abi
+2. aishu
+3. jey
+
+Enter position (1 to 3) to update: 3
+Enter new name: shalu
+
+Names after update:
+1. abi
+2. aishu
+3. shalu
+
+Enter position (1 to 3) to delete: 2
+
+Names after delete:
+1. abi
+2. shalu
+
+
