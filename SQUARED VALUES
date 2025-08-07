@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class SquareSeries {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter how many square numbers you want: ");
+        int n = sc.nextInt();
+
+        System.out.println("Square number series:");
+        for (int i = 1; i <= n; i++) {
+            int square = i * i;
+            System.out.print(square + " ");
+       }
+    }
+}
+OUTPUT:
+Enter how many square numbers you want: 8
+Square number series:
+1 4 9 16 25 36 49 64
