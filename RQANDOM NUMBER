@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class RandomWithMath {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter starting number: ");
+        int sn = input.nextInt();
+        System.out.print("Enter ending number: ");
+        int en = input.nextInt();
+        if (sn > en) {
+            System.out.println("Starting number must be less than or equal to ending number");
+        } else {
+            int random = (int)(Math.random() * (en - sn + 1)) + sn;
+            System.out.println("Random number between " + sn + " and " + en + " is: " + random);
+        }
+    }
+}
+OUTPUT:
+Enter starting number: 10
+Enter ending number: 20
+Random number between 10 and 20 is: 14
+
