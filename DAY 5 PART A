@@ -1,0 +1,164 @@
+1)
+public class main {
+     public static void mymethod(String X ){
+    System.out.println(X);
+}
+public static void main(String[]args)
+    {
+       mymethod("alamelu");
+    }
+}
+output:
+alamelu
+ 2) INTEGER PASSING
+  public class main {
+    public static void mymethod(int x, int y){
+    System.out.println(x + y);
+}
+public static void main(String[] args) {
+       mymethod(3, 2);
+    }
+}
+output:
+5
+
+5) SWITCH CASE
+  3)public class Main {
+    public static void mymethod(String name, int age, int score) {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Score: " + score);
+    }
+
+    public static void main(String[] args) {
+        mymethod("alamelu", 19, 56);
+    }
+}
+output:
+Name: alamelu
+Age: 19
+Score: 56
+
+
+4)import java.util.Scanner;
+
+public class SwitchCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        
+        System.out.println("Choose an operation:");
+        System.out.println("1. Add");
+        System.out.println("2. Subtract");
+        System.out.println("3. Multiply");
+        System.out.println("4. Divide");
+
+        int choice = sc.nextInt();
+
+        switch (choice) {
+            case 1:
+                System.out.println("Addition: " + (a + b));
+                break;
+
+            case 2:
+                System.out.println("Subtraction: " + (a - b));
+                break;
+
+            case 3:
+                System.out.println("Multiplication: " + (a * b));
+                break;
+
+            case 4:
+                if (b != 0) {
+                    System.out.println("Division: " + (a / b));
+                } else {
+                    System.out.println("Error: Division by zero!");
+                }
+                break;
+
+            default:
+                System.out.println("Invalid choice!");
+        }
+    }
+}
+output:
+Enter first number: 2
+Enter second number: 4
+Choose an operation:
+1. Add
+2. Subtract
+3. Multiply
+4. Divide
+1
+Addition: 6
+  5) instagram:
+import java.util.Scanner;
+
+public class Instagram {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+       
+        String correctUsername = "alamelu";
+        String correctPassword = "12345";
+
+        
+        System.out.print("Enter your Instagram username: ");
+        String username = sc.nextLine();
+
+        System.out.print("Enter your Instagram password: ");
+        String password = sc.nextLine();
+
+        
+        if (username.equals(correctUsername) && password.equals(correctPassword)) {
+            System.out.println("Login successful! Welcome to Instagram.");
+        } else {
+            System.out.println("Login failed! Incorrect username or password.");
+        }
+    }
+}
+output:
+Enter your Instagram username: alamelu
+Enter your Instagram password: 12345
+Login successful! Welcome to Instagram.
+  6)
+  import java.util.Scanner;
+public class Instagram {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String correctUsername = "admin";
+        String correctPassword = "1234";
+        System.out.print("Enter username: ");
+        String username = scanner.nextLine();
+        System.out.print("Enter password: ");
+        String password = scanner.nextLine();
+        if (username.equals(correctUsername) && password.equals(correctPassword)) {
+            System.out.println("Login successful!");
+        } else {
+            System.out.println("Invalid username or password.");
+        }
+        scanner.close();
+    }
+}
+output:
+Enter username: admin
+Enter password: 1234
+Login successful!
+
+        
+
+        
+        
+  
+
+
+
+
+  
