@@ -1,0 +1,117 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class GetBytesAndChar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+        System.out.print("Enter position to get character (0-based index): ");
+        int index = sc.nextInt();
+        if (index >= 0 && index < str.length()) {
+            char ch = str.charAt(index);
+            System.out.println("Character at index " + index + ": " + ch);
+        } else {
+            System.out.println("Invalid index!");
+        }
+        byte[] byteArray = str.getBytes();
+        System.out.println("Bytes of the string: " + Arrays.toString(byteArray));
+        }
+}
+output:
+Enter a string: alamelu
+Enter position to get character (0-based index): 2
+Character at index 2: a
+Bytes of the string: [97, 108, 97, 109, 101, 108, 117]
+2)
+import java.util.Scanner;
+import java.util.Arrays;
+public class GetBytesAndChar {
+    public static void main(String[] args) {
+        String name =("alamelu");
+        byte[] arr = name.getBytes();
+        System.out.println(arr[0]);
+    }
+}
+ouput:
+97
+3)
+import java.util.Scanner;
+public class HashCodeExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+        int hash = str.hashCode();
+        System.out.println("Hash code of \"" + str + "\" is: " + hash);
+        }
+}
+ouput:
+Enter a string: alamelu
+Hash code of "alamelu" is: -921578569
+4)
+import java.util.Scanner;
+public class IndexOfExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the main string: ");
+        String mainStr = sc.nextLine();
+        System.out.print("Enter the substring to find: ");
+        String subStr = sc.nextLine();
+        int index = mainStr.indexOf(subStr);
+        if (index != -1) {
+            System.out.println("Substring found at index: " + index);
+        } else {
+            System.out.println("Substring not found.");
+        }
+    }
+}
+output:
+Enter the main string: alamelu
+Enter the substring to find: melu
+Substring found at index: 3
+5)
+public class Main {
+    public static void main(String[] args) {
+        String str1 = "";
+        String str2 = "Hello";
+        System.out.println("str1 is empty? " + str1.isEmpty());
+        System.out.println("str2 is empty? " + str2.isEmpty());
+    }
+}
+ouput:
+str1 is empty? true
+str2 is empty? false
+6)
+public class Main {
+    public static void main(String[] args) {
+        String[] words = {"Apple", "Banana", "Cherry"};
+        String result = String.join(", ", words);
+        System.out.println("Joined String: " + result);
+    }
+}
+ouput:
+Joined String: Apple, Banana, Cherry
+7)
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+        System.out.print("Enter a character to find last index of: ");
+        char ch = sc.next().charAt(0);
+        int length = str.length();
+        System.out.println("Length of string: " + length);
+        int lastIndex = str.lastIndexOf(ch);
+        System.out.println("Last index of '" + ch + "': " + lastIndex);
+        }
+}
+ouput:
+Enter a string: alamelu
+Enter a character to find last index of: m
+Length of string: 7
+Last index of 'm': 3
+8)
+
+
+
