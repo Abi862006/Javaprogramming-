@@ -1,0 +1,258 @@
+STRING INBUILT METHODS
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String text = scanner.nextLine();
+        System.out.println("Enter an index:");
+        int index = scanner.nextInt();
+        char ch = text.charAt(index);
+        System.out.println("charAt(" + index + ") = " + ch);
+        int cpAt = text.codePointAt(index);
+        System.out.println("codePointAt(" + index + ") = " + cpAt);
+        if (index > 0) {
+            int cpBefore = text.codePointBefore(index);
+            System.out.println("codePointBefore(" + index + ") = " + cpBefore);
+        } else {
+            System.out.println("codePointBefore(" + index + ") is not available (index is 0).");
+        }
+    }
+}
+OUTPUT:
+Enter a string:
+alamelu
+Enter an index:
+2
+charAt(2) = a
+codePointAt(2) = 97
+codePointBefore(2) = 108
+2)
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter first string:");
+        String str1 = scanner.nextLine();
+        System.out.println("Enter second string:");
+        String str2 = scanner.nextLine();
+        System.out.println("Enter start index for codePointCount:");
+        int start = scanner.nextInt();
+        System.out.println("Enter end index for codePointCount:");
+        int end = scanner.nextInt();
+        if (start >= 0 && end <= str1.length() && start < end) {
+            int count = str1.codePointCount(start, end);
+            System.out.println("codePointCount(" + start + ", " + end + ") = " + count);
+        } else {
+            System.out.println("Invalid start/end indexes for codePointCount.");
+        }
+        int compareResult = str1.compareTo(str2);
+        System.out.println("compareTo result: " + compareResult);
+        int compareIgnoreCaseResult = str1.compareToIgnoreCase(str2);
+        System.out.println("compareToIgnoreCase result: " + compareIgnoreCaseResult);
+        }
+}
+output:
+Enter first string:
+alamelu
+Enter second string:
+abi
+Enter start index for codePointCount:
+0
+Enter end index for codePointCount:
+4
+codePointCount(0, 4) = 4
+compareTo result: 10
+compareToIgnoreCase result: 10
+3)
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter first string:");
+        String str1 = scanner.nextLine();
+        System.out.println("Enter second string:");
+        String str2 = scanner.nextLine();
+        String result = str1.concat(str2);
+        System.out.println("Concatenated string: " + result);
+    }
+}
+output:
+Enter first string:
+hello
+Enter second string:
+alamelu
+Concatenated string: helloalamelu
+4)
+import java.util.Scanner;
+public class ContainsExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter main string:");
+        String mainStr = sc.nextLine();
+        System.out.println("Enter substring to check:");
+        String subStr = sc.nextLine();
+        if (mainStr.contains(subStr)) {
+            System.out.println("The main string contains the substring.");
+        } else {
+            System.out.println("The main string does NOT contain the substring.");
+        }
+    }
+}
+output:
+Enter first string:
+hello
+Enter second string:
+alamelu
+Concatenated string: helloalamelu
+5)
+import java.util.Scanner;
+public class ContentEqualsExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first string:");
+        String str1 = sc.nextLine();
+        System.out.println("Enter second string:");
+        String str2 = sc.nextLine();
+        if (str1.contentEquals(str2)) {
+            System.out.println("Both strings have exactly the same content.");
+        } else {
+            System.out.println("Strings do not have the same content.");
+        }
+   }
+}
+OUTPUT:
+Enter first string:
+ALAMELU
+Enter second string:
+ALAMELU
+Both strings have exactly the same content.
+6)
+import java.util.Scanner;
+public class CopyValueOfExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String input = sc.nextLine();
+        char[] charArray = input.toCharArray();
+        String fullCopy = String.copyValueOf(charArray);
+        System.out.println("Full copy using copyValueOf: " + fullCopy);
+        System.out.println("Enter start index:");
+        int start = sc.nextInt();
+        System.out.println("Enter length to copy:");
+        int length = sc.nextInt();
+        if (start >= 0 && start + length <= charArray.length) {
+            String partialCopy = String.copyValueOf(charArray, start, length);
+            System.out.println("Partial copy using copyValueOf: " + partialCopy);
+        } else {
+            System.out.println("Invalid start or length for partial copy.");
+        }
+    }
+}
+OUTPUT:
+Enter a string:
+ALAMELU
+Full copy using copyValueOf: ALAMELU
+Enter start index:
+0
+Enter length to copy:
+7
+Partial copy using copyValueOf: ALAMELU
+7)
+import java.util.Scanner;
+public class EndsWithExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter main string:");
+        String mainStr = sc.nextLine();
+        System.out.println("Enter suffix to check:");
+        String suffix = sc.nextLine();
+        {
+            System.out.println("The string ends with the given suffix.");
+        } else {
+            System.out.println("The string does NOT end with the given suffix.");
+        }
+    }
+}
+OUTPUT:
+Enter main string:
+ALAMELU PERIAKARUPPAN
+Enter suffix to check:
+PERIAKARUPPAN
+The string ends with the given suffix.
+8)
+import java.util.Scanner;
+public class EqualsExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first string:");
+        String str1 = sc.nextLine();
+        System.out.println("Enter second string:");
+        String str2 = sc.nextLine();
+        if (str1.equals(str2)) {
+            System.out.println("Strings are exactly equal (case-sensitive).");
+        } else {
+            System.out.println("Strings are NOT equal.");
+        }
+   }
+}
+OUTPUT:
+Enter first string:
+ALAMELU
+Enter second string:
+ALAMELU
+Strings are exactly equal (case-sensitive).
+9)
+import java.util.Scanner;
+public class EqualsIgnoreCaseExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first string:");
+        String str1 = sc.nextLine();
+        System.out.println("Enter second string:");
+        String str2 = sc.nextLine();
+        if (str1.equalsIgnoreCase(str2)) {
+            System.out.println("Strings are equal (ignoring case).");
+        } else {
+            System.out.println("Strings are NOT equal (even ignoring case).");
+        }
+   }
+}
+output:
+Enter first string:
+alamelu
+Enter second string:
+alamelu
+Strings are equal (ignoring case).
+10)
+import java.util.Scanner;
+public class FormatExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your name:");
+        String name = sc.nextLine();
+        System.out.println("Enter your age:");
+        int age = sc.nextInt();
+        String formatted = String.format("Hello %s, you are %d years old.", name, age);
+        System.out.println(formatted);
+    }
+}
+output:
+Enter your name:
+alamelu
+Enter your age:
+20
+Hello alamelu, you are 20 years old.
+
+
+
+
+
+
+
+
+
+
+
+        
