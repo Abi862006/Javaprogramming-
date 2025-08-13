@@ -1,0 +1,278 @@
+1)
+public class MatchesExample {
+    public static void main(String[] args) {
+        String str1 = "hello";
+        String str2 = "12345";
+        System.out.println(str1.matches("[a-z]+")); 
+        System.out.println(str2.matches("\\d+")); 
+        System.out.println(str1.matches("he.*")); 
+        System.out.println(str1.matches("he")); 
+    }
+}
+OUTPUT:
+true
+true
+true
+false
+2)REPLACE:
+public class ReplaceDemo {
+    public static void main(String[] args) {
+        String text = "apple apple apple";
+        String result1 = text.replace("apple", "orange");
+        System.out.println("replace(): " + result1);
+        String result2 = text.replaceAll("apple", "mango");
+        System.out.println("replaceAll(): " + result2);
+        String result3 = text.replaceFirst("apple", "grape");
+        System.out.println("replaceFirst(): " + result3);
+    }
+}
+OUTPUT:
+replace(): orange orange orange
+replaceAll(): mango mango mango
+replaceFirst(): grape apple apple
+3)
+public class Main {
+    public static void main(String[] args) {
+       String x = ("hi alamelu my dear!!");
+       String y = "[,\\ .\\s] ";
+       String[] z=x.split(y);
+       for(String s:z){
+           System.out.println(s);
+       }
+    }
+}
+output:
+hi alamelu my
+dear!!
+4)
+import java.util.Scanner;
+public class SplitConcatUser {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your name multiple times (separated by spaces): ");
+        String input = sc.nextLine();
+        String[] names = input.split(" ");
+        System.out.println("\nAfter split():");
+        for (String name : names) {
+            System.out.println(name);
+        }
+        String result = "";
+        for (String name : names) {
+            result = result.concat(name).concat(" ");
+        }
+        System.out.println("\nAfter concat(): " + result.trim());
+        }
+}
+output:
+Enter your name multiple times (separated by spaces): alamelu periakaruppan
+
+After split():
+alamelu
+periakaruppan
+
+After concat(): alamelu periakaruppan
+5)
+public class StartsWithDemo {
+    public static void main(String[] args) {
+        String text = "Alamelu is learning Java";
+        System.out.println(text.startsWith("Alamelu")); 
+        System.out.println(text.startsWith("Java")); 
+        System.out.println(text.startsWith("is", 8)); 
+    }
+}
+output:
+true
+false
+true
+6)
+import java.util.Scanner;
+public class TwoNameSpace {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first name: ");
+        String firstName = sc.nextLine();
+        System.out.print("Enter second name: ");
+        String secondName = sc.nextLine();
+        String fullName = firstName.concat(" ").concat(secondName);
+        System.out.println("Full name: " + fullName);
+    }
+}
+output:
+Enter first name: alamelu
+Enter second name: jeyanthan
+Full name: alamelu jeyanthan
+7)
+import java.util.Scanner;
+public class EmailInput {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your email ID: ");
+        String email = sc.nextLine();
+        System.out.println("Your email ID is: " + email);
+    }
+}
+output:
+Enter your email ID: alamelu@gmail.com
+Your email ID is: alamelu@gmail.com
+8)
+public class SubSequenceDemo {
+    public static void main(String[] args) {
+        String text = "Alamelu";
+        CharSequence sub = text.subSequence(0, 6);
+        System.out.println("Subsequence: " + sub);
+        CharSequence sub2 = text.subSequence(6, text.length());
+        System.out.println("Subsequence: " + sub2);
+    }
+}
+output:
+Subsequence: Alamel
+Subsequence: u
+9)
+public class SubstringDemo {
+    public static void main(String[] args) {
+        String text = "Alamelu";
+        String sub1 = text.substring(3);
+        System.out.println("Substring from index 3: " + sub1);
+        String sub2 = text.substring(0, 6);
+        System.out.println("Substring from 0 to 6: " + sub2);
+    }
+}
+output:
+Substring from index 3: melu
+Substring from 0 to 6: Alamel
+10)
+public class Main {
+    public static void main(String[] args) {
+        String name = "Alamelu";
+        char[] chars = name.toCharArray();
+        for (char c : chars) {
+            System.out.println(c);
+        }
+    }
+}
+output:
+A
+l
+a
+m
+e
+l
+u
+
+11)
+public class Main {
+    public static void main(String[] args) {
+        String name = "ALAMELU";
+        String lowerName = name.toLowerCase();
+        System.out.println("Original: " + name);
+        System.out.println("Lowercase: " + lowerName);
+    }
+}
+OUTPUT:
+Original: ALAMELU
+Lowercase: alamelu
+12)
+public class Main {
+    public static void main(String[] args) {
+        String name = "alamelu";
+        String upperName = name.toUpperCase();
+        System.out.println("Original: " + name);
+        System.out.println("Uppercase: " + upperName);
+    }
+}
+output:
+Original: alamelu
+Uppercase: ALAMELU
+13)
+class Person {
+    String name;
+    int age;
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    @Override
+    public String toString() {
+        return "Person[name=" + name + ", age=" + age + "]";
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Person p = new Person("Alamelu", 20);
+        System.out.println(p.toString()); 
+        System.out.println(p);
+    }
+}
+ouput:
+Person[name=Alamelu, age=20]
+Person[name=Alamelu, age=20]
+14)
+public class Main {
+    public static void main(String[] args) {
+        String str = "   Hello Alamelu   ";
+        System.out.println("Before trim: [" + str + "]");
+        System.out.println("After trim: [" + str.trim() + "]");
+    }
+}
+output:
+Before trim: [   Hello Alamelu   ]
+After trim: [Hello Alamelu]
+15)
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        Integer intObj = Integer.valueOf(sc.nextInt());
+        System.out.print("Enter a double: ");
+        Double doubleObj = Double.valueOf(sc.nextDouble());
+        System.out.print("Enter a float: ");
+        Float floatObj = Float.valueOf(sc.nextFloat());
+        System.out.print("Enter a long: ");
+        Long longObj = Long.valueOf(sc.nextLong());
+        System.out.print("Enter a short: ");
+        Short shortObj = Short.valueOf(sc.nextShort());
+        System.out.print("Enter a byte: ");
+        Byte byteObj = Byte.valueOf(sc.nextByte());
+        System.out.print("Enter a boolean (true/false): ");
+        Boolean boolObj = Boolean.valueOf(sc.nextBoolean());
+        System.out.print("Enter a character: ");
+        Character charObj = Character.valueOf(sc.next().charAt(0));
+        System.out.println("\n=== Wrapper Objects from valueOf() ===");
+        System.out.println("Integer object: " + intObj);
+        System.out.println("Double object: " + doubleObj);
+        System.out.println("Float object: " + floatObj);
+        System.out.println("Long object: " + longObj);
+        System.out.println("Short object: " + shortObj);
+        System.out.println("Byte object: " + byteObj);
+        System.out.println("Boolean object: " + boolObj);
+        System.out.println("Character object: " + charObj);
+        }
+}
+output:
+Enter an integer: 67
+Enter a double: 45.8
+Enter a float: 45.3
+Enter a long: 78
+Enter a short: 12
+Enter a byte: 78
+Enter a boolean (true/false): true
+Enter a character: strings doll
+
+=== Wrapper Objects from valueOf() ===
+Integer object: 67
+Double object: 45.8
+Float object: 45.3
+Long object: 78
+Short object: 12
+Byte object: 78
+Boolean object: true
+Character object: s
+
+
+
+
+
+
+
+
