@@ -1,0 +1,134 @@
+1)
+class Payment {
+    public void mode() {
+        System.out.println("Payment");
+    }
+}
+
+
+class UPI extends Payment {
+    @Override
+    public void mode() {
+        System.out.println("UPI");
+    }
+}
+
+
+class Credit extends Payment {
+    @Override
+    public void mode() {
+        System.out.println("Credit");
+    }
+}
+
+
+class BankTransfer extends Payment {
+    @Override
+    public void mode() {
+        System.out.println("Bank Transfer");
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Payment payment;
+
+        payment = new UPI();
+        payment.mode();
+
+        payment = new Credit();
+        payment.mode();
+
+        payment = new BankTransfer();
+        payment.mode();
+
+        payment = new Payment();
+        payment.mode();
+    }
+output:
+UPI
+Credit
+Bank Transfer
+Payment
+2)
+class Vehicle {
+    public void drive() {
+        System.out.println("drive");
+    }
+}
+
+class Bike extends Vehicle {
+    @Override
+    public void drive() {
+        System.out.println("driving bike");
+    }
+}
+
+class Car extends Vehicle {
+    @Override
+    public void drive() {
+        System.out.println("driving car");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehicle vehicle = new Vehicle();
+        vehicle.drive(); 
+
+        Bike bike = new Bike();
+        bike.drive(); 
+
+        Car car = new Car();
+        car.drive(); 
+    }
+}
+output:
+drive
+driving bike
+driving car
+3)
+class EmployeeSalary {
+    public void salary() {
+        System.out.println("Employees Salary");
+    }
+}
+class Manager extends EmployeeSalary{
+    @Override
+    public void salary() {
+        System.out.println("My salary is 100000");
+    }
+}
+class HR extends EmployeeSalary{
+    @Override
+    public void salary() {
+        System.out.println("My salary is 50000");
+    }
+}
+class Employee extends EmployeeSalary{
+    @Override
+    public void salary() {
+        System.out.println("My salary is 30000");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        EmployeeSalary v = new Manager();
+        v.salary();
+        EmployeeSalary a = new HR();
+        a.salary();
+        EmployeeSalary c = new Employee();
+        c.salary();
+        EmployeeSalary b = new EmployeeSalary();
+        b.salary();
+    }
+}
+output:
+My salary is 100000
+My salary is 50000
+My salary is 30000
+Employees Salary
+4)
+
+}
