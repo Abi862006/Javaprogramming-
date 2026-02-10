@@ -1,0 +1,339 @@
+1)get all dts
+
+import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+        byte a = scan.nextByte();
+        short b = scan.nextShort();
+        int c = scan.nextInt();
+        float d = scan.nextFloat();
+        long e = scan.nextLong();
+        double f = scan.nextDouble();
+        String str1 = scan.next();
+        scan.nextLine();//getting string input between same values
+        String str2 = scan.nextLine();
+        char ch = scan. next().charAt(0);
+        System.out.println(a+" "+b);
+        System.out.println(c+" "+d);
+        System.out.println(e+" "+f);
+        System.out.println(str1+" "+str2);
+        System.out.println(ch);
+        
+        
+    }
+}
+
+2)sum of digits
+  
+import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int sum = 0;
+        while (a>0) {
+            int r = a%10;
+            sum = sum + r;
+            a = a/10;
+        }
+        System.out.println(sum);
+        
+    }
+}
+1234
+10
+3) reverse sum of digits
+  import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int rev=0;
+        int sum = 0;
+        while(a>0){
+            int r = a%10;
+        rev = rev*10+r;
+            a=a/10;
+        }
+        System.out.println(rev);
+        
+    }
+}
+output:
+2341
+4321
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+  4) palindrome
+  import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int rev=0;
+        int temp = a;
+        while(a>0){
+            int r = a%10;
+        rev = rev*10+r;
+            a=a/10;
+        }
+        if(rev==temp){
+            System.out.println("palindrome");
+        }
+        else{
+            System.out.println("not palindrome");
+        }
+        
+    }
+}
+output:
+121
+palindrome
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+  5)print
+  import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("abi alamelu");
+    }
+}
+output:
+
+
+abi alamelu
+  6)print multi line
+  import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("abi");
+      System.out.println("alamelu");
+    }
+}
+output:
+Output:
+
+abi
+alamelu
+  7)
+
+  import java.util.Scanner;
+
+public class HelloUser {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+
+        System.out.println("Hello " + name + "!");
+
+        sc.close();
+    }
+}
+8)
+  import java.util.Scanner;
+
+public class VowelOrConsonant {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+
+        
+        ch = Character.toLowerCase(ch);
+
+        if (ch == 'a' || ch == 'e' || ch == 'i' || 
+            ch == 'o' || ch == 'u') {
+            System.out.println("It is a vowel");
+        } else if (ch >= 'a' && ch <= 'z') {
+            System.out.println("It is a consonant");
+        } else {
+            System.out.println("Invalid input");
+        }
+
+        sc.close();
+    }
+}
+9)
+  public class PrintNumbers {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+output:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+10
+
+  import java.util.Scanner;
+
+public class NumberToWord {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number (0-9): ");
+        int num = sc.nextInt();
+
+        switch (num) {
+            case 0: System.out.println("Zero"); break;
+            case 1: System.out.println("One"); break;
+            case 2: System.out.println("Two"); break;
+            case 3: System.out.println("Three"); break;
+            case 4: System.out.println("Four"); break;
+            case 5: System.out.println("Five"); break;
+            case 6: System.out.println("Six"); break;
+            case 7: System.out.println("Seven"); break;
+            case 8: System.out.println("Eight"); break;
+            case 9: System.out.println("Nine"); break;
+            default: System.out.println("Invalid input");
+        }
+
+        sc.close();
+    }
+}
+11)
+  import java.util.Scanner;
+
+public class SumOfTwoNumbers {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        int sum = a + b;
+
+        System.out.println("Sum = " + sum);
+
+        sc.close();
+    }
+}
+12)
+  import java.util.Scanner;
+
+public class LargestOfTwo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        if (a > b) {
+            System.out.println("Largest number is: " + a);
+        } else if (b > a) {
+            System.out.println("Largest number is: " + b);
+        } else {
+            System.out.println("Both numbers are equal");
+        }
+
+        sc.close();
+    }
+}
+13)
+  import java.util.Scanner;
+
+public class LargestOfThree {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        System.out.print("Enter third number: ");
+        int c = sc.nextInt();
+
+        if (a >= b && a >= c) {
+            System.out.println("Largest number is: " + a);
+        } else if (b >= a && b >= c) {
+            System.out.println("Largest number is: " + b);
+        } else {
+            System.out.println("Largest number is: " + c);
+        }
+
+        sc.close();
+    }
+}
+14)
+  import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        char ch = scan.next().charAt(0);
+        if(ch>='A' && ch<='z'){
+          System.out.println((char)(ch+32));
+        }
+        else if(ch>='a' && ch<='z'){
+          System.out.println((char)(ch-32));
+        }
+        else{
+          System.out.println(ch);
+        }
+
+        
+    }
+}
+output:
+jey
+  15)
+  import java.util.Scanner;
+
+public class LeapYearCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a year: ");
+        int year = sc.nextInt();
+
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println("yes");
+        } else {
+            System.out.println("no");
+        }
+
+        sc.close();
+    }
+}
+
+  
+  
+  
+  
+
+
+  
+
+
+
+
+
+
+
