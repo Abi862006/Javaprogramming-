@@ -1,0 +1,226 @@
+1)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        System.out.println("Factors of " + n + " are:");
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+output:
+Enter a number: 32
+Factors of 32 are:
+1 2 4 8 16 32 
+  2)
+  import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int count = 0;
+
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                count++;
+            }
+        }
+
+        System.out.println("Number of factors: " + count);
+    }
+}
+output:
+Enter a number: 150
+Number of factors: 12
+  3)
+  import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int count = 0;
+
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                count++;
+            }
+        }
+
+        if (count == 2) {
+            System.out.println("Prime number");
+        } else {
+            System.out.println("Not a prime number");
+        }
+    }
+}
+output:
+Enter a number: 28
+Not a prime number
+  4)
+  import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        long fact = 1;
+
+        for (int i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+
+        System.out.println("Factorial of " + n + " is: " + fact);
+    }
+}
+output:
+Enter a number: 8
+Factorial of 8 is: 40320
+  5)
+  import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of terms: ");
+        int n = sc.nextInt();
+
+        int a = 0, b = 1;
+
+        System.out.print("Fibonacci series: ");
+        for (int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+}
+output:
+Enter number of terms: 5
+Fibonacci series: 0 1 1 2 3 
+  6)
+  import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        if (a > b) {
+            System.out.println("Bigger number is: " + a);
+        } else {
+            System.out.println("Bigger number is: " + b);
+        }
+    }
+}
+output:
+Enter first number: 23
+Enter second number: 48
+Bigger number is: 48
+  7)
+  import java.util.Scanner;
+
+public class OddEven {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        if (n % 2 == 0) {
+            System.out.println("EVEN");
+        } else {
+            System.out.println("ODD");
+        }
+    }
+}
+output:
+Enter a number: 35
+ODD
+  8)hw question
+  armstrong
+  import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int original = num;
+        int sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            sum = sum + (digit * digit * digit);
+            num = num / 10;
+        }
+
+        if (sum == original) {
+            System.out.println("ARMSTRONG");
+        } else {
+            System.out.println("NOT ARMSTRONG");
+        }
+    }
+}
+output:
+Enter a number: 153
+ARMSTRONG
+9)char 
+  import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+
+        if (ch >= '0' && ch <= '9') {
+            System.out.println("DIGIT");
+        } else if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
+            System.out.println("ALPHABET");
+        } else {
+            System.out.println("SPECIAL CHARACTER");
+        }
+    }
+}
+output:
+Enter a character: j
+ALPHABET
+  
+
+
+
+
+  
+  
+
+
+
