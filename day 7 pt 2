@@ -1,0 +1,252 @@
+1)
+  import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        sc.nextLine(); 
+
+        String input = sc.nextLine();
+        input = input.replaceAll("\\[|\\]|\\s", ""); 
+        String[] numbers = input.split(",");
+
+        int evenmax = Integer.MIN_VALUE;
+        int oddmax = Integer.MIN_VALUE;
+
+        for(int i = 0; i < size; i++) {
+            int num = Integer.parseInt(numbers[i]);
+
+            if(num % 2 == 0) {
+                if(num > evenmax) {
+                    evenmax = num;
+                }
+            } else {
+                if(num > oddmax) {
+                    oddmax = num;
+                }
+            }
+        }
+
+        System.out.println("EvenMax: " + evenmax);
+        System.out.println("OddMax: " + oddmax);
+    }
+}
+output:
+7
+[1,2,3,5,78,90,4]
+EvenMax: 90
+OddMax: 5
+  2)
+  methods
+import java.util.*;
+public class Main {
+    
+      public static boolean prime(int a){
+        int count=0;
+        for(int i=1;i<a;i++){
+          if(a%i==0){
+            count++;
+          }
+        }
+        if(count==2){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+      public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int num1 = sc.nextInt();
+        System.out.println(prime(num));
+        System.out.println(prime(num1));
+      }
+}
+output:
+15
+
+23
+false
+false
+  3)
+  import java.util.*;
+public class Main {
+    
+      public void prime(int a){
+        int count=0;
+        for(int i=1;i<a;i++){
+          if(a%i==0){
+            count++;
+          }
+        }
+        if(count==2){
+          System.out.println(true);
+        }
+        else{
+          System.out.println(false);
+        }
+      }
+      public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int num1 = sc.nextInt();
+        Main m = new Main();
+        m.prime(num);
+        m.prime(num1);
+      }
+}
+output:
+15
+23
+false
+false
+  4)
+  //without arg with return type
+import java.util.*;
+public class Main{
+    public static boolean prime(){
+        Scanner sc = new Scanner(System.in);
+        int a=sc.nextInt();
+        int count=0;
+        for(int i=1;i<=a;i++){
+            if(a%i==0){
+                count++;
+            }
+        }
+        if(count==2){
+            return true;
+        }
+        else{
+          return false;
+        }
+    }
+	public static void main(String[] args) {
+	   System.out.println(prime());
+	   System.out.println(prime());
+	  
+	}
+}
+output:
+14
+false
+5)
+  import java.util.Scanner;
+
+public class Main {
+
+    
+    static boolean isPrime(int n) {
+        if (n <= 1) return false;
+
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+   
+    static int reverse(int n) {
+        int rev = 0;
+        while (n > 0) {
+            rev = rev * 10 + n % 10;
+            n = n / 10;
+        }
+        return rev;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+        int rev = reverse(num);
+
+        if (isPrime(num) && isPrime(rev)) {
+            System.out.println("Twisted Prime");
+        } else {
+            System.out.println("Not Twisted Prime");
+        }
+    }
+}
+output:
+71
+Twisted Prime
+  6)
+  class Student {
+    int reg;
+    String name;
+    void assign(int r,String n) {
+        reg = r;
+        name = n;
+    }
+    void print() {
+        System.out.println(reg +" "+name);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Student m1 = new Student();
+        m1.assign(101,"alamelu");
+        Student m2 = new Student();
+        m2.assign(102,"abi");
+        m1.print();
+        m2.print();
+    }
+}
+output:
+101 alamelu
+102 abi
+7)
+  class Student {
+    int reg;
+    String name;
+    Student(int r,String n) {
+        reg = r;
+        name = n;
+    }
+    void print() {
+        System.out.println(reg +" "+name);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Student m1 = new Student(101,"alamelu");
+        Student m2 = new Student(102,"abi");
+        m1.print();
+        m2.print();
+    }
+}
+output:
+101 alamelu
+102 abi
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+   
+    
+    
+  
+  
+
+
+
